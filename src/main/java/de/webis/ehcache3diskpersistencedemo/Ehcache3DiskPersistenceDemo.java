@@ -11,7 +11,7 @@ import org.ehcache.config.units.MemoryUnit;
 
 public class Ehcache3DiskPersistenceDemo {
 	final static PersistentCacheManager cacheManager = CacheManagerBuilder.newCacheManagerBuilder()
-			.with(CacheManagerBuilder.persistence("/tmp/ehcache-persistence-demo")).build();
+			.with(CacheManagerBuilder.persistence(".ehcache")).build();
 	// TODO specify the path on your system
 	static {
 		cacheManager.init();
